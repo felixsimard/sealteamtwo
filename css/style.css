@@ -350,6 +350,9 @@ input[type=number]::-webkit-outer-spin-button {
   background: url('../photos/logo.png') no-repeat center center;
   background-size: contain;
 }
+.media_tile_container {
+  background: transparent;
+}
 .media_tile {
   background: rgba(2450, 245, 245, 0.6);
   border-radius: 2px;
@@ -414,12 +417,14 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 500;
   padding: 20px 30px;
   color: black;
+  font-style: italic;
 }
 .large_font {
   font-size: 40px;
   font-weight: 700;
   text-shadow: 3px 3px white;
   text-align: center;
+  margin: 15px 0px;
 }
 .contact_container {
   width: 100%;
