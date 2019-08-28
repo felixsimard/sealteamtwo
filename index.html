@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<title>SEALTEAM02</title>
+<meta charset="utf-8">
+<meta name="author" content="Felix Simard">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Favicon image -->
+<link rel="shortcut icon" href="photos/aim_logo_ico.ico"/>
+
+<!-- CSS and JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style_min.css">
+<script src="js/main.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/pace.js"></script>
+<script src="js/typed.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/schedule.js"></script>
+<script src="js/status.js"></script>
+
+
+<script>
+
+  //--------------------------------
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    // Format the gallery
+    square();
+    // Load Schedule
+    loadSchedule();
+
+
+  });
+
+  //--------------------------------
+
+</script>
+
+<body>
+
+  <div id="status_bar"></div>
+
+  <div id="menu">
+    <div class="row format_col">
+      <div class="col-md-3 format_col">
+        <a id="schedule_link" href="#schedule"><div class="menu_tab">Schedule</div></a>
+      </div>
+      <div class="col-md-3 format_col">
+        <a id="gallery_link" href="#gallery"><div class="menu_tab">Gallery</div></a>
+      </div>
+      <div class="col-md-3 format_col">
+        <a id="about_link" href="#about_us"><div class="menu_tab">Our Story</div></a>
+      </div>
+      <div class="col-md-3 format_col">
+        <a id="contact_link" href="#contact"><div class="menu_tab">Contact</div></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="main_bg_media" class="main_bg_media brand_color">
+    <div class="row format_col">
+      <div class="col-md-4 col-xs-4 format_col">
+        <div class="main_bg_tiles" style="background:url('photos/HOW1.jpg') no-repeat center center;background-size:cover;"></div>
+      </div>
+      <div class="col-md-4 col-xs-4 format_col">
+        <div class="main_bg_tiles" style="background:url('photos/HOW2.jpg') no-repeat center center;background-size:cover;"></div>
+      </div>
+      <div class="col-md-4 col-xs-4 format_col">
+        <div class="main_bg_tiles" style="background:url('photos/HOW7.jpg') no-repeat center center;background-size:cover;"></div>
+      </div>
+    </div>
+    <div class="main_logo_font font_color">
+      SEALTEAM02
+      <div class="sub_main_logo_font">Hilel & Will</div>
+    </div>
+  </div>
+
+  <div id="main_container" class="container shadow">
+
+    <!-- SCHEDULE -->
+    <div id="schedule" class="content">
+
+      <div class="logo_container"><div class="logo"></div></div>
+
+      <div id="schedule_container" class="schedule_container">
+        <div id="schedule_list"></div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- GALLERY -->
+    <div id="gallery" class="content">
+
+      <div class="row format_col">
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/duo1.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/trio.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12 format_col">
+            <div class="media_tile shadow" style="background:url('photos/duo2.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/duo3.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/hilel2.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/duo4.jpeg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/trio2.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/will1.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/duo5.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/duo6.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/trio3.jpeg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+        <div class="media_tile_container col-md-4 col-xs-12">
+          <div class="media_tile shadow" style="background:url('photos/duo7.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+      </div> <!-- end of row  -->
+    </div> <!-- end of gallery -->
+
+    <hr>
+
+    <!-- ABOUT US -->
+    <div id="about_us" class="content">
+
+      <div class="about_container shadow">
+        <div class="row format_col">
+
+          <div class="col-md-4 format_col">
+            <div class="about_pic"></div>
+          </div>
+          <div class="col-md-8 format_col">
+            <div class="about_content">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <hr>
+
+    <!-- CONTACT -->
+    <div id="contact" class="content">
+
+      <div class="contact_container">
+        <div class="large_font">Contact Us</div>
+
+        <div class="col-md-12"><div class="social_icon fb_icon" onclick="url('https://www.facebook.com/Sealteam02-636764603416295/',true)"></div><div class="social_icon insta_icon" onclick="url('https://www.instagram.com/sealteam02/?hl=fr',true)"></div></div>
+
+      </div>
+
+    </div> <!-- end of contact -->
+
+
+    <!-- EVENT BANNER -->
+    <div class="content">
+      <div class="row format_col">
+
+        <div class="col-md-3 col-xs-6 format_col">
+          <div class="event_banner" style="background:url('photos/HOW1.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+        <div class="col-md-3 col-xs-6 format_col">
+          <div class="event_banner" style="background:url('photos/MURAL.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+        <div class="col-md-3 col-xs-6 format_col">
+          <div class="event_banner" style="background:url('photos/HOW2.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+        <div class="col-md-3 col-xs-6 format_col">
+          <div class="event_banner" style="background:url('photos/STUDYSESSION.png') no-repeat center center;background-size:cover;"></div>
+        </div>
+        <div class="col-md-3 col-xs-6 format_col">
+          <div class="event_banner" style="background:url('photos/HOW5.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+        <div class="col-md-3 col-xs-6 format_col">
+          <div class="event_banner" style="background:url('photos/LABOURSESSION.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+        <div class="col-md-3 col-xs-6 format_col">
+          <div class="event_banner" style="background:url('photos/HOW6.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+        <div class="col-md-3 col-xs-6 format_col">
+          <div class="event_banner" style="background:url('photos/HOW3.jpg') no-repeat center center;background-size:cover;"></div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+      <div class="content_div" style="background:transparent;">
+        <div class="logo_container"><div class="logo"></div></div>
+    </div>
+
+    </div> <!-- end of footer -->
+
+  </div> <!-- end of main_container -->
+
+
+
+
+</body>
+</html>

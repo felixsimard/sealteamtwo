@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<title>SEALTEAM02 - Dashboard</title>
+<meta charset="utf-8">
+<meta name="author" content="Felix Simard">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Favicon image -->
+<link rel="shortcut icon" href="../photos/aim_logo_ico.ico"/>
+
+<!-- CSS and JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/style_min.css">
+<script src="../js/main.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/pace.js"></script>
+<script src="../js/typed.js"></script>
+<script src="../js/scroll.js"></script>
+<script src="../js/schedule.js"></script>
+<script src="../js/status.js"></script>
+
+
+<script>
+
+  //--------------------------------
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    // Load Schedule
+    loadSchedule("dash");
+
+
+  });
+
+  //--------------------------------
+
+</script>
+
+<body>
+
+  <div id="status_bar"></div>
+
+  <div id="menu">
+    <div class="row format_col">
+      <div class="col-md-12 format_col">
+        <div class="menu_tab">SEALTEAM02 - DASHBOARD</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="main_bg_media" class="main_bg_media brand_color">
+
+    <div class="main_logo_font font_color_inverted">
+      SEALTEAM02 - DASHBOARD
+    </div>
+
+  </div>
+
+  <div id="main_container" class="container shadow">
+
+    <div class="content">
+
+      <div class="schedule_form">
+
+        <div style="font-size:25px;font-weight:700;color:black;text-shadow: 1px 1px #4E5893;">Add upcoming events.</div>
+        <hr>
+        <div class="row format_col">
+
+          <div class="col-md-6 col-xs-12">
+            <input id="event_name" class="input wide" placeholder="Event Name">
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <input id="event_location" class="input wide" placeholder="Location">
+          </div>
+
+          <div class="col-md-4 col-xs-4">
+            <select id="event_date_year" class="input wide">
+              <option value="2019" selected>2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-xs-4">
+            <select id="event_date_month" class="input wide">
+              <option value="01">Jan</option>
+              <option value="02">Feb</option>
+              <option value="03">Mar</option>
+              <option value="04">Apr</option>
+              <option value="05">May</option>
+              <option value="06">Jun</option>
+              <option value="07">Jul</option>
+              <option value="08">Aug</option>
+              <option value="09">Sep</option>
+              <option value="10">Oct</option>
+              <option value="11">Nov</option>
+              <option value="12">Dec</option>
+            </select>
+          </div>
+          <div class="col-md-4 col-xs-4">
+            <select id="event_date_day" class="input wide">
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+          </div>
+
+          <div class="col-md-12 col-xs-12">
+            <input id="event_tickets_link" class="input wide" placeholder="Tickets link (optional)">
+          </div>
+
+          <div class="col-md-12 col-xs-12">
+            <input id="event_event_link" class="input wide" placeholder="Event link (optional)">
+          </div>
+
+          <hr>
+
+          <div class="col-md-12 col-xs-6">
+            <button class="button brand_color wide" onclick="saveEvent()">Save</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="content">
+
+      <div id="schedule_container" class="schedule_container shadow">
+        <button class="button border_button" onclick="loadSchedule('dash')">Refresh schedule</button>
+        <hr>
+        <div id="schedule_list"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+</body>
+</html>
