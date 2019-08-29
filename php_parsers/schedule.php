@@ -96,23 +96,23 @@ if(isset($_POST["action"]) && $_POST["action"] == "get_schedule") {
 
       $out .= '<div class="schedule_row hover">';
       $out .= '<div class="row">';
-      $out .= '<div class="col-md-2">';
+      $out .= '<div class="col-md-2 col-xs-12">';
       $out .= ''.$date_format.'';
       $out .= '</div>';
-      $out .= '<div class="col-md-4">';
+      $out .= '<div class="col-md-4 col-xs-12">';
       $out .= ''.$name.'';
       $out .= '</div>';
-      $out .= '<div class="col-md-4">';
+      $out .= '<div class="col-md-4 col-xs-12">';
       $out .= ''.$location.'';
       $out .= '</div>';
-      $out .= '<div class="col-md-1">';
+      $out .= '<div class="col-md-1 col-xs-6">';
       $out .= ''.$tix_btn.'';
       $out .= '</div>';
-      $out .= '<div class="col-md-1">';
+      $out .= '<div class="col-md-1 col-xs-6">';
       $out .= ''.$link_btn.'';
       $out .= '</div>';
       if($coming_from == "dash") {
-        $out .= '<div class="col-md-12">';
+        $out .= '<div class="col-md-12 col-xs-12">';
         $out .= '<button class="small_button red" onclick="removeEvent(\''.$eid.'\')">Remove</button>';
         $out .= '</div>';
       }

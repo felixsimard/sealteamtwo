@@ -48,7 +48,7 @@ function square() {
   var container = _("gallery").offsetWidth;
   var isMobile = isMobileView();
   if(isMobile) {
-    var pic_w = (container / 1) - 5;
+    var pic_w = (container / 2) - 10;
   } else {
     var pic_w = (container / 3) - 80;
   }

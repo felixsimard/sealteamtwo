@@ -28,23 +28,18 @@ input[type="number"] {
 }
 a {
     text-decoration: none;
-		color: black;
 }
 a:link {
     text-decoration: none;
-    color: black;
 }
 a:visited {
     text-decoration: none;
-    color: black;
 }
 a:hover {
     text-decoration: none;
-    color: black;
 }
 a:active {
     text-decoration: none;
-    color: black;
 }
 input, select, textarea, button {
     font-family:inherit;
@@ -225,7 +220,6 @@ input[type=number]::-webkit-outer-spin-button {
   left: 0px;
   width: 100%;
   font-size: 65px;
-  vertical-align: middle;
   font-weight: 700;
   letter-spacing: 8px;
   text-align: center;
@@ -397,6 +391,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .about_container {
   width: 90%;
+  min-height: 200px;
   margin: 0px auto;
   padding: 0px;
   background: white;
@@ -477,4 +472,8 @@ input[type=number]::-webkit-outer-spin-button {
   border: none;
   filter: grayscale(0);
   filter: blur(0px);
+}
+.grey_text {
+	color: #d6d6d6;
+	font-size: 14px;
 }
