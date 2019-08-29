@@ -477,3 +477,6 @@ input[type=number]::-webkit-outer-spin-button {
 	color: #d6d6d6;
 	font-size: 14px;
 }
+.grey {
+	background: rgba(240, 240, 240, 0.4);
+}
